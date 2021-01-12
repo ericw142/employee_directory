@@ -1,19 +1,39 @@
 import React, { Component } from "react";
 import Searchbar from "./Searchbar";
+import Result from "./Result";
+import API from "../utils/API";
 
 class EmployeeTable extends Component {
     state = {
-        search: ""
+        search: "",
+        results: []
+    }
+
+    componentDidMount() {
+        API.searchEmployee()
+            .then(res => this.setState({ results: res.data.results }))
     }
 
     handleInputChange = event => {
         this.setState({ search: event.target.value });
+        
     };
+
+    handleSearch = event => {
+        API.searchEmployee()
+            .then(res => {
+                if (res.error) {
+                    throw new Error(res.error);
+                }
+                this.setState({ results: res.data.results });
+                console.log(res);
+            })
+            .catch(err => console.log("Error"))
+    }
 
     render() {
         return(
             <div id="EmployeeTable" className="container">
-                <p>{this.state.search}</p>
 
                 <Searchbar 
                 handleInputChange={this.handleInputChange}
@@ -29,9 +49,9 @@ class EmployeeTable extends Component {
                             <th>DOB</th>
                         </tr>
                     </thead>
-                    <tbody>
-
-                    </tbody>
+                    
+                        <Result results={this.state.results}/>
+                    
                 </table>
             </div>
         )
