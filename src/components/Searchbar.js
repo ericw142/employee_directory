@@ -5,6 +5,7 @@ function Searchbar(props) {
         <input
           value={props.search}
           onChange={props.handleInputChange}
+          autoComplete='off'
           name="search"
           type="text"
           className="form-control"

@@ -17,11 +17,11 @@ class EmployeeTable extends Component {
     handleInputChange = event => {
         let value = event.target.value;
 
-        this.setState((state) => {
-            return { search: value };
+        this.setState({ search: value }, () => {
+            this.handleSearch();
         });
 
-        this.handleSearch();
+        
     };
 
     handleSearch = () => {
