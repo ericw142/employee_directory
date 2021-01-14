@@ -15,20 +15,28 @@ class EmployeeTable extends Component {
     }
 
     handleInputChange = event => {
-        this.setState({ search: event.target.value });
-        
+        let value = event.target.value;
+
+        this.setState((state) => {
+            return { search: value };
+        });
+
+        this.handleSearch();
     };
 
-    handleSearch = event => {
-        API.searchEmployee()
-            .then(res => {
-                if (res.error) {
-                    throw new Error(res.error);
-                }
-                this.setState({ results: res.data.results });
-                console.log(res);
-            })
-            .catch(err => console.log("Error"))
+    handleSearch = () => {
+        let key = this.state.search;
+
+        let currentArr = this.state.results;
+        console.log(key);
+
+        let newArr = currentArr.filter(employee => {
+            return employee.name.first.includes(key)
+        });
+        
+        this.setState((state) => {
+            return {results: newArr};
+        });
     }
 
     render() {
@@ -36,6 +44,7 @@ class EmployeeTable extends Component {
             <div id="EmployeeTable" className="container">
 
                 <Searchbar 
+                search={this.state.search}
                 handleInputChange={this.handleInputChange}
                 />
 
