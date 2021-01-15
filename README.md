@@ -1,55 +1,72 @@
-# Unit 19 React Homework: Employee Directory
+# Employee Directory
 
-## Overview
+## Description
+A react application that uses the randomuser.me API to display a table of employees. You can filter to a specific employee by typing their name in the search bar above the table. In the future it is planned to add additional methods for searching the table, as well as options for how many employees to display at a time.
 
-For this assignment, you'll create a employee directory with React. This assignment will require you to break up your application's UI into components, manage component state, and respond to user events.
+## Table of Contents 
 
-## User Story
+* [Installation](#installation)
 
-* As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
+* [Usage](#usage)
 
-## Business Context
+* [Contributing](#contributing)
 
-An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
+* [Tests](#tests)
 
-## Acceptance Criteria
+* [Questions](#questions)
 
-Given a table of random users generated from the [Random User API](https://randomuser.me/), when the user loads the page, a table of employees should render. 
+* [License](#license)
 
-The user should be able to:
+## Installation
 
-  * Sort the table by at least one category
+To install necessary dependencies, run the following command:
+---
+npm install
 
-  * Filter the users by at least one property.
+## Usage
+N/A
 
-## Commit Early and Often
+## Contributing
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
+N/A
 
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills
+## Tests
+To run tests, run the following command:
+---
+npm run test
 
-2. Your commit history allows you to revert your code base in the event that you need to return to a previous state
 
-Follow these guidelines for committing:
+## Questions
 
-* Make single purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits
+If you have any questions about the repo, open an issue or contact me directly at eric.h.warshawsky@gmail.com. 
+You can find more of my work at [ericw142](https://github.com/ericw142/).
 
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history
+## License
 
-* Don't commit half done work, for the sake of your collaborators (and your future self!)
+None
+This is free and unencumbered software released into the public domain.
 
-* Test your application before you commit to ensure functionality at every step in the development process
+      Anyone is free to copy, modify, publish, use, compile, sell, or
+      distribute this software, either in source code form or as a compiled
+      binary, for any purpose, commercial or non-commercial, and by any
+      means.
+      
+      In jurisdictions that recognize copyright laws, the author or authors
+      of this software dedicate any and all copyright interest in the
+      software to the public domain. We make this dedication for the benefit
+      of the public at large and to the detriment of our heirs and
+      successors. We intend this dedication to be an overt act of
+      relinquishment in perpetuity of all present and future rights to this
+      software under copyright law.
+      
+      THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+      EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+      MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+      IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+      OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+      ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+      OTHER DEALINGS IN THE SOFTWARE.
+      
+      For more information, please refer to <https://unlicense.org>
 
-* We would like you to have well over 200 commits by graduation, so commit early and often!
 
-* Deploy this site to GitHub Pages using the [Create React App docs for deployment.](https://create-react-app.dev/docs/deployment/#github-pages)
-
-* **Important**: Be sure to push your codebase to GitHub and **NOT** your built and deployed code. Ensure this happens by following the above instructions and using the `gh-pages` branch to host the deployed application's code.
-
-## Submission on BCS
-
-You are required to submit the following:
-
-* the URL to the deployed application
-
-* the URL to the Github repository
