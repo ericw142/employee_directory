@@ -1,5 +1,8 @@
 # Employee Directory
 
+
+![Home Page](assets/homepage.png?raw=true "Home Page")
+
 ## Description
 A react application that uses the randomuser.me API to display a table of employees. You can filter to a specific employee by typing their name in the search bar above the table. In the future it is planned to add additional methods for searching the table, as well as options for how many employees to display at a time.
 
